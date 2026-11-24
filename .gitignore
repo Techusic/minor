@@ -39,5 +39,6 @@ build/
 # IDE and OS files
 .vscode/
 .idea/
+.claude/
 .DS_Store
 Thumbs.db

@@ -1,6 +1,6 @@
 # Photoholic — Aesthetic Neural Network & Rust↔Python Bridge: Implementation Plan
 
-> **For Claude Code.** This file is the full brief. Read it top to bottom before writing code.
+> **Implementation brief.** Read this file top to bottom before writing code.
 > Work phase by phase, run the acceptance checks at the end of each phase, and commit after each phase
 > using the repo's commit format (see §8). Ask the user before any step marked **[ASK]**.
 
@@ -317,7 +317,7 @@ Only start this if the user asks. Keep the JSON contract identical so Python doe
 
 ---
 
-## 7. Rules for Claude Code
+## 7. Development rules
 
 1. **Never delete or modify the user's original photos.** Only read them; outputs go to `.photoholic/` or `photoholic_picks/`.
 2. **[ASK]** before: downloading datasets, installing CUDA/GPU packages, starting a training run longer than ~10 minutes, or changing the Rust sharpness algorithm.
@@ -335,7 +335,7 @@ Only start this if the user asks. Keep the JSON contract identical so Python doe
 - Model weights (`.onnx`, ~9 MB) are gitignored by default. **[ASK]** the user whether to use Git LFS, a GitHub Release asset,
   or a shared drive link, and document the choice in README.
 
-## 9. Open decisions for the team (Claude Code should ask, not assume)
+## 9. Open decisions for the team (ask, do not assume)
 
 1. Dataset size: full AVA vs subset, and where training will run (local GPU / Colab / Kaggle).
 2. Decision-matrix weights (start 0.4 / 0.6) — tune after looking at real results.
